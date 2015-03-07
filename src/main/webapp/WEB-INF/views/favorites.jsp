@@ -6,6 +6,6 @@
 	    		<h4>{{f.contact.name}} - {{f.contact.phoneNumber}} <a class="btn btn-default" href="#/details/{{f.contact.id}}">Details</a></h4>
 	    	</li>
 	    </ul>
-	    <a class="btn btn-success" href="#/favorites">Favorites</a>
+	    <a class="btn btn-default" href="#/">Home</a>
 	</div>
 </div>
