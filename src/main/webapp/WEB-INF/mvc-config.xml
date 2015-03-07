@@ -24,6 +24,7 @@
  	<!-- static resources (css, js) mapped in the ${webappRoot}/views/resources directory -->
  	<mvc:resources mapping="/libraries/**" location="/WEB-INF/libraries/" />
     <mvc:resources mapping="/resources/**" location="/WEB-INF/resources/" />
+    <mvc:resources mapping="/angular/**" location="/WEB-INF/angular/" />
 
 	<!-- Flyway configuration -->
 	<bean id="flyway" class="org.flywaydb.core.Flyway" init-method="migrate">

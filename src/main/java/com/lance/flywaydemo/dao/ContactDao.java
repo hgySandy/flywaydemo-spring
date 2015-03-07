@@ -28,4 +28,9 @@ public class ContactDao {
     public List<Contact> getAll() {
         return this.jdbcTemplate.query("SELECT * FROM " + Contact.class.getAnnotation(TableName.class).value(), new GenericObjectMapper<Contact>(Contact.class));
     }
+    
+    public Contact getById(Integer id) {
+        return this.jdbcTemplate.query("SELECT * FROM " + Contact.class.getAnnotation(TableName.class).value()
+        		+ " WHERE id = " + id, new GenericObjectMapper<Contact>(Contact.class)).get(0);
+    }    
 }
