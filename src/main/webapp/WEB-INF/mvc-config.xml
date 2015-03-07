@@ -41,13 +41,21 @@
     <!-- Use @Transaction annotations for managing transactions -->
     <tx:annotation-driven transaction-manager="myTxManager" />
 
-<!-- LOCAL Connection -->
+<!-- LOCAL Connection (dev) -->
+<!--      <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> -->
+<!--  	    <property name="driverClassName" value="com.mysql.jdbc.Driver" /> -->
+<!-- 		<property name="url" value="jdbc:mysql://127.0.0.1:3306/flyway_demo_dev" /> -->
+<!-- 		<property name="username" value="lfallon" /> -->
+<!-- 		<property name="password" value="Raven$1996" /> -->
+<!--      </bean> -->
+     
+<!-- LOCAL Connection (production) -->
      <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" depends-on="flyway">
  	    <property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://127.0.0.1:3306/flyway_demo_prod" />
 		<property name="username" value="lfallon" />
 		<property name="password" value="Raven$1996" />
-     </bean>     
+     </bean>               
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
