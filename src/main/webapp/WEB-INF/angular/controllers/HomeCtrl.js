@@ -12,6 +12,5 @@
 		$scope.viewDetails = function(id){
 			$location.path("/details/" + id);
 		}
-
 	});
 })();
