@@ -8,13 +8,12 @@
 
     	$routeProvider.when('/', {
     		templateUrl : 'Home',
-    		controller : 'HomeCtrl',
-    		css : 'resources/css/home.css'
+    		controller : 'HomeCtrl'
     	});
 
-    	$routeProvider.when('/details', {
+    	$routeProvider.when('/details/:id', {
     		templateUrl : 'Details',
-    		controller : 'DetailssCtrl'
+    		controller : 'DetailsCtrl'
     	});    	       
 
         $routeProvider.otherwise({

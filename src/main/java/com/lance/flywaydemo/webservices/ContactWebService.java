@@ -27,7 +27,7 @@ public class ContactWebService {
 		return contactDao.getAll();
 	}
 	
-	@RequestMapping(value="/api/contact/{id}", method=RequestMethod.GET)
+	@RequestMapping(value="{id}", method=RequestMethod.GET)
 	public Contact getById(@PathVariable Integer id){
 		return contactDao.getById(id);
 	}	

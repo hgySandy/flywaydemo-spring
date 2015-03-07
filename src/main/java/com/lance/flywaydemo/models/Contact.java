@@ -20,7 +20,7 @@ public class Contact {
 	@TemplateConstructor
 	public Contact(@PropertyName("id") Integer id,
 			@PropertyName("name") String name,
-			@PropertyName("phone_number") String phoneNumber) {
+			@PropertyName("phoneNumber") String phoneNumber) {
 		this.id = id;
 		this.name = name;
 		this.phoneNumber = phoneNumber;
