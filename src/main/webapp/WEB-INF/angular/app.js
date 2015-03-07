@@ -14,7 +14,7 @@
     	$routeProvider.when('/details/:id', {
     		templateUrl : 'Details',
     		controller : 'DetailsCtrl'
-    	});    	       
+    	});    	           	
 
         $routeProvider.otherwise({
             redirectTo: '/'
