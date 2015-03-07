@@ -27,10 +27,10 @@
     <mvc:resources mapping="/angular/**" location="/WEB-INF/angular/" />
 
 	<!-- Flyway configuration -->
-	<bean id="flyway" class="org.flywaydb.core.Flyway" init-method="migrate">
-	    <property name="locations" value="migrations/" />
-	    <property name="dataSource" ref="dataSource" />
-	</bean>
+<!-- 	<bean id="flyway" class="org.flywaydb.core.Flyway" init-method="migrate"> -->
+<!-- 	    <property name="locations" value="migrations/" /> -->
+<!-- 	    <property name="dataSource" ref="dataSource" /> -->
+<!-- 	</bean> -->
 
  	<!-- Add Transaction support -->
     <bean id="myTxManager"
@@ -42,20 +42,20 @@
     <tx:annotation-driven transaction-manager="myTxManager" />
 
 <!-- LOCAL Connection (Dev) -->
-<!--      <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  -->
-<!--  	    <property name="driverClassName" value="com.mysql.jdbc.Driver" /> -->
-<!-- 		<property name="url" value="jdbc:mysql://127.0.0.1:3306/flyway_demo_dev" /> -->
-<!-- 		<property name="username" value="lfallon" /> -->
-<!-- 		<property name="password" value="Raven$1996" /> -->
-<!--      </bean> -->
-     
-<!-- LOCAL Connection (Production) -->
-     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" depends-on="flyway"> 
+     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
  	    <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://127.0.0.1:3306/flyway_demo_prod" />
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/flyway_demo_dev" />
 		<property name="username" value="lfallon" />
 		<property name="password" value="Raven$1996" />
-     </bean>     
+     </bean>
+     
+<!-- LOCAL Connection (Production) -->
+<!--      <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" depends-on="flyway">  -->
+<!--  	    <property name="driverClassName" value="com.mysql.jdbc.Driver" /> -->
+<!-- 		<property name="url" value="jdbc:mysql://127.0.0.1:3306/flyway_demo_prod" /> -->
+<!-- 		<property name="username" value="lfallon" /> -->
+<!-- 		<property name="password" value="Raven$1996" /> -->
+<!--      </bean>      -->
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

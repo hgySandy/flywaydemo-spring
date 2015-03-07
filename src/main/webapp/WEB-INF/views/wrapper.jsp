@@ -19,6 +19,7 @@
     <script src="angular/controllers/MainCtrl.js" type="text/javascript"></script>
     <script src="angular/controllers/HomeCtrl.js" type="text/javascript"></script>
     <script src="angular/controllers/DetailsCtrl.js" type="text/javascript"></script>
+    <script src="angular/controllers/FavoritesCtrl.js" type="text/javascript"></script>
     <link type="text/css" rel="stylesheet" href="libraries/css/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="resources/css/site.css" />
 </head>

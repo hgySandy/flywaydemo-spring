@@ -25,6 +25,11 @@ public class AppController {
         return "details";
     }    
     
+    @RequestMapping(value="/Favorites", method=RequestMethod.GET)
+    public final String favoritesGet(){
+        return "favorites";
+    }        
+    
     @RequestMapping(value="/Error", method=RequestMethod.GET)
     public final ModelAndView RequestErrorHandler(HttpServletRequest request, HttpServletResponse response){
         return new ModelAndView("redirect:/");

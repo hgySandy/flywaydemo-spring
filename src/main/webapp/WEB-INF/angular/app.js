@@ -14,7 +14,12 @@
     	$routeProvider.when('/details/:id', {
     		templateUrl : 'Details',
     		controller : 'DetailsCtrl'
-    	});    	       
+    	});
+    	
+    	$routeProvider.when('/favorites', {
+    		templateUrl : 'Favorites',
+    		controller : 'FavoritesCtrl'
+    	});        	
 
         $routeProvider.otherwise({
             redirectTo: '/'
