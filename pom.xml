@@ -117,7 +117,7 @@
 			    <artifactId>flyway-maven-plugin</artifactId>
 			    <version>3.1</version>
 			    <configuration>
-					<url>jdbc:mysql://pc30093.catalystsolves.com:3306/flyway_demo_prod</url>
+					<url>jdbc:mysql://127.0.0.1:3306/flyway_demo_prod</url>
 					<user>lfallon</user>
 					<password>Raven$1996</password>
 					<locations>
